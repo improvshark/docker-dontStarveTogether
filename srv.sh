@@ -2,7 +2,7 @@ HOSTPORT=10999
 CONTAINERPORT=10999
 
 USERNAME=improvshark
-NAME=dontStarveTogether
+NAME=dont_starve_together
 
 
 function launch {
