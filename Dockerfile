@@ -32,7 +32,6 @@ RUN ln -s /opt/steamcmd/linux32/libstdc++.so.6 /opt/dontStarveTogether/bin/lib32
 
 #setup config
 RUN mkdir -p /.klei/DoNotStarveTogether
-ADD server_token.txt /.klei/DoNotStarveTogether/server_token.txt
 ADD settings.ini /.klei/DoNotStarveTogether/settings.ini
 
 
