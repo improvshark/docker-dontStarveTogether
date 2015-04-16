@@ -30,10 +30,13 @@ RUN dpkg --add-architecture i386
 RUN apt-get -qq update && apt-get -qq -y install libcurl4-gnutls-dev:i386
 RUN ln -s /opt/steamcmd/linux32/libstdc++.so.6 /opt/dontStarveTogether/bin/lib32/
 
+#add user
+RUN useradd -ms /bin/bash steam
+USER steam 
 
 #setup config
-RUN mkdir -p /.klei/DoNotStarveTogether
-ADD settings.ini /.klei/DoNotStarveTogether/settings.ini
+RUN mkdir -p /home/steam/.klei/DoNotStarveTogether
+ADD settings.ini /home/steam/.klei/DoNotStarveTogether/settings.ini
 
 
 
@@ -41,7 +44,7 @@ ADD settings.ini /.klei/DoNotStarveTogether/settings.ini
 VOLUME /opt/
 
 # Expose ports
-EXPOSE 10999
+EXPOSE 10999/udp
 
 # Define default command.
 WORKDIR /opt/dontStarveTogether/bin

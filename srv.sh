@@ -9,7 +9,7 @@ function update {
 }
 
 function launch {
-  docker run  --name $NAME  -i -t -p $CONTAINERPORT:$HOSTPORT $USERNAME/$NAME
+  docker run  --name $NAME  -i -t -p $CONTAINERPORT:$HOSTPORT/udp $USERNAME/$NAME
 }
 
 function build {
