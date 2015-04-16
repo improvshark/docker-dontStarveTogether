@@ -1,4 +1,5 @@
 FROM ubuntu:14.10
+MAINTAINER improvshark <improvshark@gmail.com>
 
 # Install base packages
 RUN apt-get -qq update
