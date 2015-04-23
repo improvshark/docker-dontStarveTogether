@@ -24,21 +24,24 @@ RUN /opt/steamcmd/steamcmd.sh \
             +app_update 343050  validate \
             +quit
 
-
 #fix dependancy problems
 RUN dpkg --add-architecture i386
-RUN apt-get -qq update && apt-get -qq -y install libcurl4-gnutls-dev:i386
+RUN apt-get -qq update && apt-get -qq -y install libcurl4-gnutls-dev:i386 vim
 RUN ln -s /opt/steamcmd/linux32/libstdc++.so.6 /opt/dontStarveTogether/bin/lib32/
+
+#  copy settings and create save dir
+RUN mkdir -p /opt/save/
+ADD settings.ini /opt/save/
+RUN mkdir -p /home/steam/.klei/
+RUN ln -s /opt/save /home/steam/.klei/DoNotStarveTogether
+
+# mod configs
+ADD mods/* /opt/dontStarveTogether/mods/
 
 #add user
 RUN useradd -ms /bin/bash steam
+RUN chown steam:steam -R /opt
 USER steam 
-
-#setup config
-RUN mkdir -p /home/steam/.klei/DoNotStarveTogether
-ADD settings.ini /home/steam/.klei/DoNotStarveTogether/settings.ini
-
-
 
 # create a volume for modifications of files
 VOLUME /opt/
@@ -48,4 +51,8 @@ EXPOSE 10999/udp
 
 # Define default command.
 WORKDIR /opt/dontStarveTogether/bin
+
+# install mod files
+RUN ./dontstarve_dedicated_server_nullrenderer -only_update_server_mods
+#CMD ["/bin/bash"]
 CMD ["./dontstarve_dedicated_server_nullrenderer"]
