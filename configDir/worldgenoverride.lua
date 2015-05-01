@@ -1,0 +1,72 @@
+return {
+	override_enabled = true,
+animals={ --options are "never", "rare", "default", "often", "always"
+	alternatehunt="default",
+	angrybees="default",
+	beefalo="default",
+	beefaloheat="default",
+	bees="default",
+	birds="default",
+	butterfly="default",
+	buzzard="default",
+	catcoon="default",
+	frogs="default",
+	hunt="default",
+	lightninggoat="default",
+	moles="default",
+	penguins="default",
+	perd="default",
+	pigs="default",
+	rabbits="default",
+	tallbirds="default" 
+},
+misc={
+	boons="default", --options are "never", "rare", "default", "often", "always"
+	branching="default", --options are "never", "least", "default", "most"
+	day="default", --options are "onlyday", "onlydusk", "onlynight", "default", "longday", "longdusk", "longnight"
+	frograin="default", --options are "never", "rare", "default", "often", "always"
+	lightning="default", --options are "never", "rare", "default", "often", "always"
+	loop="default", --options are "never", "default", "always"
+	season="default", --options are "onlysummer", "onlywinter", "default", "longsummer", "longwinter", "longboth", "shortboth"
+	season_start="summer", --options are "winter", "summer"
+	touchstone="default", --options are "never", "rare", "default", "often", "always"
+	weather="default", --options are "never", "rare", "default", "often", "always"
+	world_size="huge", --options are "default", "medium", "large", "huge"
+ 	wildfires="default" --options are "never", "rare", "default", "often", "always"
+},
+monsters={ --options are "never", "rare", "default", "often", "always"
+	bearger="default",
+	chess="default",
+	deciduousmonster="default",
+	deerclops="default",
+	dragonfly="default",
+	goosemoose="default",
+	hounds="default",
+	krampus="default",
+	liefs="default",
+	lureplants="default",
+	merm="default",
+	spiders="default",
+	tentacles="default",
+	walrus="default" 
+},
+resources={ --options are "never", "rare", "default", "often", "always"
+	flint="default",
+	flowers="default",
+	grass="default",
+	marshbush="default",
+	meteorshowers="default",
+	meteorspawner="default",
+	reeds="default",
+	rock="default",
+	rocks="default",
+	sapling="default",
+	trees="default",
+	tumbleweed="default" 
+},
+unprepared={ --options are "never", "rare", "default", "often", "always"
+	berrybush="default",
+	cactus="default",
+	carrot="default",
+	mushroom="default"
+} }

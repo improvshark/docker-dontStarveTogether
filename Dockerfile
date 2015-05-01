@@ -31,7 +31,7 @@ RUN ln -s /opt/steamcmd/linux32/libstdc++.so.6 /opt/dontStarveTogether/bin/lib32
 
 #  copy settings and create save dir
 RUN mkdir -p /opt/save/
-ADD settings.ini /opt/save/
+ADD configDir/* /opt/save/
 RUN mkdir -p /home/steam/.klei/
 RUN ln -s /opt/save /home/steam/.klei/DoNotStarveTogether
 

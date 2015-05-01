@@ -25,6 +25,7 @@ ForceEnableMod("workshop-365119238") -- smart crockpot
 -- custom characters
 ForceEnableMod("workshop-366048578") -- devon, the hunter
 ForceEnableMod("workshop-422744946") -- walter
+ForceEnableMod("workshop-391086703") -- heather
 --ForceEnableMod("workshop-394605741") -- willrick the plague doctor
 --ForceEnableMod("workshop-374341561") -- fionna
 --ForceEnableMod("workshop-363819976") -- gir
