@@ -4,7 +4,15 @@ ServerModSetup("373991022") -- Global Player icons...
 ServerModSetup("375859599") -- Health info
 ServerModSetup("375850593") -- Extra Equip Slots
 ServerModSetup("354415247") -- throwable spears
---ServerModSetup("357186881") -- i understand (gets rid of mod warning)
 ServerModSetup("352499675") -- Reserrection shelter
---ServerModSetup("345692228") -- Minimap HUD
+ServerModSetup("356420397") -- no more respawn penalty
+ServerModSetup("365119238") -- smart crocpot
 
+
+-- custom characters
+ServerModSetup("366048578") -- devon, the hunter
+ServerModSetup("422744946") -- walter
+--ServerModSetup("394605741") -- willrick the plague doctor
+--ServerModSetup("374341561") -- fionna
+--ServerModSetup("430224994") -- gollum 
+--ServerModSetup("363819976") -- gir
