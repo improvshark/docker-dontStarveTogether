@@ -1,4 +1,4 @@
-FROM ubuntu:14.10
+FROM ubuntu:14.04
 MAINTAINER improvshark <improvshark@gmail.com>
 
 # Install base packages
@@ -29,19 +29,15 @@ RUN dpkg --add-architecture i386
 RUN apt-get -qq update && apt-get -qq -y install libcurl4-gnutls-dev:i386 vim
 RUN ln -s /opt/steamcmd/linux32/libstdc++.so.6 /opt/dontStarveTogether/bin/lib32/
 
-#  copy settings and create save dir
+#  create save dir and link
 RUN mkdir -p /opt/save/
-ADD configDir/* /opt/save/
-RUN mkdir -p /home/steam/.klei/
-RUN ln -s /opt/save /home/steam/.klei/DoNotStarveTogether
-
-# mod configs
-ADD mods/* /opt/dontStarveTogether/mods/
+RUN mkdir -p /root/.klei/
+RUN ln -s /opt/save /root/.klei/DoNotStarveTogether
 
 #add user
-RUN useradd -ms /bin/bash steam
-RUN chown steam:steam -R /opt
-USER steam 
+#RUN useradd -ms /bin/bash steam
+#RUN chown steam:steam -R /opt
+#USER steam 
 
 # create a volume for modifications of files
 VOLUME /opt/
@@ -55,4 +51,4 @@ WORKDIR /opt/dontStarveTogether/bin
 # install mod files
 RUN ./dontstarve_dedicated_server_nullrenderer -only_update_server_mods
 #CMD ["/bin/bash"]
-CMD ["./dontstarve_dedicated_server_nullrenderer"]
+CMD ["./dontstarve_dedicated_server_nullrenderer","-shard","Master"]

@@ -1,0 +1,22 @@
+dst-master:
+  container_name: dst-master
+  build: ./Master/
+  ports:
+   - "10999:10999/udp"
+   - "10888:10888/udp"
+  expose:
+   - "10999"
+   - "10888"
+  volumes:
+   - ./save:/opt/save
+   - ./mods:/opt/dontStarveTogether/mods
+dst-caves:
+  container_name: dst-caves
+  build: ./Caves/
+  ports:
+   - "10998:10998/udp"
+  volumes:
+   - ./save:/opt/save
+   - ./mods:/opt/dontStarveTogether/mods
+  links:
+   - dst-master:dst-master

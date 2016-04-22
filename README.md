@@ -1,8 +1,9 @@
 # docker-dontStarveTogether
-a dockerfile for dont starve together server and a handy script...
+Dont starve together server (with caves)
 
-1. clone repo and navagate to it
-2. edit settins.ini , and put your server token in there (http://dont-starve-game.wikia.com/wiki/Don%E2%80%99t_Starve_Together_Dedicated_Servers)
-2. $ ./srv.sh build
-3. $ ./srv.sh start
-4.  then for later use you can just use $ docker start dont_starve_together
+1. Clone repo and navagate to it
+2. Edit configs in the save folder to your liking. put your server token in save/Cluster_1/cluster_token.txt (http://steamcommunity.com/sharedfiles/filedetails/?id=590565473)
+2. run:  docker-compose up -d
+
+
+The srv.sh is old... If I get a chance I will do a little more cleanup. If you have any problems or questions feel free to submit an issue. 
