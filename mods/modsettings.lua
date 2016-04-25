@@ -13,10 +13,10 @@
 --EnableModDebugPrint()
 
 --ForceEnableMod("workshop-369588618") -- Renewable World
---ForceEnableMod("workshop-373991022") -- Global Player icons...
---ForceEnableMod("workshop-375859599") -- Health info
+ForceEnableMod("workshop-378160973") -- Global Player icons...
+ForceEnableMod("workshop-375859599") -- Health info
 --ForceEnableMod("workshop-375850593") -- Extra Equip Slots
---ForceEnableMod("workshop-354415247") -- throwable spears
+ForceEnableMod("workshop-354415247") -- throwable spears
 --ForceEnableMod("workshop-352499675") -- Reserrection shelter
 --ForceEnableMod("workshop-356420397") -- no more respawn penalty
 --ForceEnableMod("workshop-365119238") -- smart crockpot
